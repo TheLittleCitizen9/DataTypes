@@ -14,6 +14,12 @@ class UsersList{
     }
 
     enterNewUser(user){
+        var arr = Array.from(this.users)
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].name === user.name) {
+                return false
+            }
+        }
         this.users.add(user)
     }
 
